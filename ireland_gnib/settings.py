@@ -8,7 +8,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ireland-gnib.herokuapp.com', 'localhost:8000']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
