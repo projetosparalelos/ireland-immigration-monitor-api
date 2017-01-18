@@ -13,5 +13,5 @@ class SearchViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows Searchs to be viewed or edited.
     """
-    queryset = Search.objects.all()
+    queryset = Search.objects.all().order_by('-date')[:1]
     serializer_class = SearchSerializer
