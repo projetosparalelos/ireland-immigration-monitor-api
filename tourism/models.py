@@ -7,6 +7,7 @@ class Place(models.Model):
     web = models.URLField(null=True, blank=True)
     phone = models.CharField(max_length=15, null=True, blank=True)
     text = models.TextField()
+    image = models.ImageField(null=True, blank=True, upload_to='places-image')
 
     def __str__(self):
         return self.name
