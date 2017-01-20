@@ -9,3 +9,4 @@ djangorestframework
 Pillow
 django-storages
 boto
+scrapy
