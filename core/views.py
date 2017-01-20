@@ -3,7 +3,8 @@ from django.http import HttpResponse
 from rest_framework import viewsets
 from core.serializers import SearchSerializer
 from core.models import Search
-import urllib2, ssl, json, time
+import ssl, json, time
+import urllib.request as urllib2
 
 
 def home(request):
