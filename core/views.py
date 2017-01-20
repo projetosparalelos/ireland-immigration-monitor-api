@@ -34,7 +34,7 @@ def search(url):
     req = urllib2.Request(url, headers={ 'X-Mashape-Key': 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' })
     gcontext = ssl.SSLContext(ssl.PROTOCOL_TLSv1)  # Only for gangstars
     info = urllib2.urlopen(req, context=gcontext).read()
-    # info = json.loads(info)
+    info = json.loads(info)
     return info
 
 
