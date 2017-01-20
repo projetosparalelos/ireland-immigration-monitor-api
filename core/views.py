@@ -3,8 +3,13 @@ from django.http import HttpResponse
 from rest_framework import viewsets
 from core.serializers import SearchSerializer
 from core.models import Search
-import ssl, json, time
-import urllib.request as urllib2
+import ssl
+import json
+
+try:
+    import urllib.request as urllib2
+except ImportError:
+    import urllib2
 
 
 def home(request):
@@ -29,7 +34,7 @@ def search(url):
     req = urllib2.Request(url, headers={ 'X-Mashape-Key': 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' })
     gcontext = ssl.SSLContext(ssl.PROTOCOL_TLSv1)  # Only for gangstars
     info = urllib2.urlopen(req, context=gcontext).read()
-    info = json.loads(info)
+    # info = json.loads(info)
     return info
 
 
