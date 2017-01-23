@@ -94,3 +94,4 @@ ENV/
 *.sqlite3
 .vEnv
 *pyc
+.myenv
