@@ -4,6 +4,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^api/gnib/', include('core.urls')),
+    url(r'^myexchange/api/', include('myexchange.urls')),
     url(r'^api/tourism/', include('tourism.urls')),
     url(r'^admin/', admin.site.urls),
 ]

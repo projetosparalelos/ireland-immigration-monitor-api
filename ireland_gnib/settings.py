@@ -8,6 +8,8 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 
+OPENWEATHERAPI = config('OPENWEATHERAPI')
+
 ALLOWED_HOSTS = ['ireland-gnib.herokuapp.com', 'localhost']
 
 INSTALLED_APPS = [
@@ -20,6 +22,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'core',
     'tourism',
+    'myexchange',
 ]
 
 MIDDLEWARE = [
