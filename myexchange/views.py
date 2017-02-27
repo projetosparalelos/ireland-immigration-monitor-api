@@ -18,8 +18,7 @@ def search(url):
 
 
 def weather(request, city_code):
-    url = 'http://openweathermap.org/data/2.5/weather?id={city_id}&appid' \
-          '={api}?units=metric'.format(city_id=city_code, api=OPENWEATHERAPI)
-    url = 'http://samples.openweathermap.org/data/2.5/find?q=London&units=metric&appid=b1b15e88fa797225412429c1c50c122a1'
+    url = 'http://api.openweathermap.org/data/2.5/weather?id={city_id}&appid' \
+          '={api}&units=metric'.format(city_id=city_code, api=OPENWEATHERAPI)
     result = search(url)
     return HttpResponse(json.dumps(result), content_type="application/json")
